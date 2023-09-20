@@ -51,10 +51,10 @@ class Rectangle():
 
     # YOUR CODE HERE
     def perimeter(self):
-        if(self.verify_input == False):
+        if(self.verify_input() == False):
             return "Invalid input"
         else:
-            return ((2*self.width) + (2*self.height))
+            return (2*(self.width+self.height))
 
 
 def main():
@@ -65,6 +65,12 @@ def main():
     print()
 
     r = Rectangle(0, 10)
+    print(r)
+    print("Area:", r.area())
+    print("Perimeter:", r.perimeter())
+    print()
+
+    r = Rectangle(20, 10)
     print(r)
     print("Area:", r.area())
     print("Perimeter:", r.perimeter())
